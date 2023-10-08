@@ -5,9 +5,9 @@
 /**
  * main - entry point
  *
- * Des : positive or negative or zero
+ * Description : positive or negative or zero
  *
- * return : 0 (success)
+ * Return: 0 (success)
 */
 
 int main(void)
