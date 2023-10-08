@@ -7,7 +7,7 @@
  *
  * Des : positive or negative or zero
  *
- * return 0
+ * return : 0 (success)
 */
 
 int main(void)
