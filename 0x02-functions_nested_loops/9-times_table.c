@@ -20,7 +20,7 @@ void times_table(void)
 			if(ans <= 9)
 				printf(",  %d", ans);
 			else
-				printf(", %d, ans);
+				printf(", %d", ans);
 		}
 		printf("\n");
 	}
