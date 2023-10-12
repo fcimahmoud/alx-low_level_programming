@@ -33,6 +33,8 @@ void print_diagonal(int numberOfTimesTheCharacter)
 			{
 				continue;
 			}
+			for (s = 1; s <= p; ++s)
+				_putchar(' '); /*is equal to '/' char*/
 			_putchar('\n');
 		}
 	}
