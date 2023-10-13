@@ -22,7 +22,11 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", i);
-		_putchar(' ');
+		if (i != 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	_putchar('\n');
+
+	return (0);
 }
