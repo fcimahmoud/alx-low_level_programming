@@ -19,10 +19,10 @@ void _puts(char *string)
 	{
 		/* Call the '_putchar' function to print the */
 		/* current character in the string. */
-		_putchar(string[num]);
+		putchar(string[num]);
 	}
 
 	/* After printing the string, add a new line  */
 	/* character to create a newline in the output. */
-	_putchar('\n');
+	putchar('\n');
 }
