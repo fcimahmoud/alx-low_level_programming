@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 /**
- * _puts - function that prints a string, followed by a new line
- *
- * @str: string parameter
- *
- * Return:
-*/
+ * _puts - Write a function that prints a string,
+ * followed by a new line, to stdout.
+ * @string: The given string to be printed.
+ * --------------------------
+ * Write a function that prints a string,
+ * followed by a new line, to stdout.
+ */
 void _puts(char *string)
 {
 	/* Initialize a counter variable 'num' to 0. */
