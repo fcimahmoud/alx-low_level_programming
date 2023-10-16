@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _puts - function that prints a string, followed by a new line
@@ -7,13 +8,21 @@
  *
  * Return:
 */
-
-void _puts(char *str)
+void _puts(char *string)
 {
-	while (*str != '\0')
+	/* Initialize a counter variable 'num' to 0. */
+	int num = 0;
+
+	/* Use a 'for' loop to iterate through the characters in the */
+	/* string until a null-terminating character ('\0') is encountered. */
+	for (; string[num] != '\0'; num++)
 	{
-		_putchar(*str + 0);
-		str++;
+		/* Call the '_putchar' function to print the */
+		/* current character in the string. */
+		_putchar(string[num]);
 	}
+
+	/* After printing the string, add a new line  */
+	/* character to create a newline in the output. */
 	_putchar('\n');
 }
