@@ -48,7 +48,7 @@ if (isDelimiter(*s))
 f = 1;
 else if (isLower(*s) && f)
 {
-*s = 32;
+*s -= 32;
 f = 0;
 }
 else
