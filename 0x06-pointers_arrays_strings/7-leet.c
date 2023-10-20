@@ -1,60 +1,34 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * isLower - determines if char is Lowercase
- * @c: char
- * Return: 1 if true, 0 if false
+ * leet -  function that encodes a string into 1337.
+ * @c: string
+ * Return: string that is encoded
  */
 
-int isLower(char c)
+char *leet(char *c)
 {
-return (c >= 97 && c <= 122);
+  char *cp = c;
+  char key[] = {'A', 'E', 'O', 'T', 'L'};
+  int value[] = {4, 3, 0, 7, 1};
+  unsigned int i;
+
+  while (*c)
+    {
+      for (i = 0; i < sizeof(key) / sizeof(char); i++)
+        {
+          if (*c == key[i] || *c == key[i] + 32)
+          {
+            *c = 48 + value[i];
+          }
+        }
+      c++;
+    }
+
+  return (cp);
 }
 
-/**
- * isDelimiter - determines if char is a delimiter
- * @c: char
- * Return: 1 if true, 0 if false
-*/
 
-int isDelimiter(char c)
-{
-int i;
-char delimiter[] = " \t\n,;.!?\"(){}";
-
-for (i = 0; i < 12; i++)
-{
-if (c == delimiter[i])
-return (1);
-}
-return (0);
-}
-
-/**
- * cap_string -  function that capitalizes all words of a string.
- * @s: input string
- * Return: string with capital words
-*/
-
-char *cap_string(char *s)
-{
-char *ptr = s;
-int f = 1;
-
-while (*s)
-{
-if (isDelimiter(*s))
-f = 1;
-else if (isLower(*s) && f)
-{
-*s -= 32;
-f = 0;
-}
-else
-f = 0;
-s++;
-}
-return (ptr);
-}
 
 
