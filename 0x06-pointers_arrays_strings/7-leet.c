@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * isLower - determines if char is Lowercase
@@ -20,7 +19,7 @@ return (c >= 97 && c <= 122);
 
 int isDelimiter(char c)
 {
-int i =;
+int i;
 char delimiter[] = " \t\n,.!?\"(){}";
 
 for (i = 0; i < 12; i++)
