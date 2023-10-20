@@ -1,29 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strcmp - Write a function that compares two strings.
- * Prototype: int _strcmp(char *s1, char *s2);
- * Your function should work exactly like strcmp
+ * @s1: first string
+ * @s2: second string
+ *
+ * Return: 1 if true, 0 if false
  */
 
-int _strcmp(char *firstString, char *secondString)
+int _strcmp(char *s1, char *s2)
 {
+	int eq = 0;
 
-	while (*firstString != '\0' && *secondString != '\0')
+	while (*s1)
 	{
-		if (*firstString < *secondString)
+		if (*s1 != *s2)
 		{
-			output = *firstString - *secondString;
-			return (output);
+			eq = ((int)*s1 - 48) - ((int)*s2 - 48);
+			break;
 		}
-		else if (*firstString > *secondString)
-		{
-			output = *firstString - *secondString;
-			return (output);
-		}
-		firstString++;
-		secondString++;
+		s1++;
+		s2++;
 	}
-	return (0);
+
+	return (eq);
 }
